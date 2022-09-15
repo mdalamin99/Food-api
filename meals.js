@@ -4,7 +4,6 @@ const url=`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`
       .then(res=>res.json())
       .then(data=>displayMeals(data.meals))
 }
-
 const displayMeals=meals=>{
       const mealsContinaier=document.getElementById("meal-container");
       mealsContinaier.innerHTML='';
@@ -37,7 +36,6 @@ const loadMealDetail=(idMeal)=>{
       .then(res=>res.json())
       .then(data=>displayMealDetails(data.meals[0]));
 }
-
 const  displayMealDetails=meal=>{
       const ditailContainer=document.getElementById("detail-container");
       ditailContainer.innerHTML='';
